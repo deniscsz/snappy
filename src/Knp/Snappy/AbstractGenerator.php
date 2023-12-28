@@ -72,10 +72,6 @@ abstract class AbstractGenerator implements GeneratorInterface, LoggerAwareInter
         $this->setBinary($binary);
         $this->setOptions($options);
         $this->env = empty($env) ? null : $env;
-
-        if (\is_callable([$this, 'removeTemporaryFiles'])) {
-            \register_shutdown_function([$this, 'removeTemporaryFiles']);
-        }
     }
 
     public function __destruct()
