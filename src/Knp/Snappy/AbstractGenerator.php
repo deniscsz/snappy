@@ -65,7 +65,7 @@ abstract class AbstractGenerator implements GeneratorInterface, LoggerAwareInter
      * @param array       $options
      * @param null|array  $env
      */
-    public function __construct($binary, array $options = [], array|null $env = null)
+    public function __construct($binary = null, array $options = [], ?array $env = null)
     {
         $this->configure();
 
